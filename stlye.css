@@ -1,0 +1,53 @@
+body {
+  font-family: sans-serif;
+  background-color: #fff;
+  color: #000;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  text-align: center;
+}
+
+body.dark {
+  background-color: #121212;
+  color: #f9f9f9;
+}
+
+button {
+  margin: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: #f0f0f0;
+  padding: 15px;
+  border-radius: 12px;
+  width: 200px;
+  transition: transform 0.3s ease, background 0.4s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background: #e0e0e0;
+}
+
+body.dark .card {
+  background: #1f1f1f;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
